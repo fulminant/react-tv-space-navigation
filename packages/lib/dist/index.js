@@ -2129,9 +2129,11 @@ exports.SpatialNavigationView = (0, react_1.forwardRef)(({
   direction = 'horizontal',
   alignInGrid = false,
   children,
-  style
+  style,
+  index
 }, ref) => {
   return (0, jsx_runtime_1.jsx)(Node_1.SpatialNavigationNode, {
+    index: index,
     orientation: direction,
     alignInGrid: alignInGrid,
     ref: ref,

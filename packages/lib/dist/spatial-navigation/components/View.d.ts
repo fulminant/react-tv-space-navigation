@@ -6,6 +6,7 @@ type Props = {
     style?: ViewStyle;
     direction: 'horizontal' | 'vertical';
     alignInGrid?: boolean;
+    index?: number;
 };
 export declare const SpatialNavigationView: import("react").ForwardRefExoticComponent<Props & import("react").RefAttributes<SpatialNavigationNodeRef>>;
 export {};
