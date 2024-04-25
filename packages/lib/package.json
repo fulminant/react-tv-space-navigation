@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bamlab/react-tv-space-navigation.git"
+    "url": "git+https://github.com/fulminant/react-tv-space-navigation.git"
   },
   "license": "MIT",
   "devDependencies": {
@@ -26,7 +26,8 @@
     "test:types": "tsc",
     "publish:prepare": "cp ../../README.md . && yarn build",
     "publish:package": "yarn publish:prepare && npm publish --access public && rm README.md",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@bam.tech/lrud": "^8.0.1",
