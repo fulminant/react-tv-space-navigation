@@ -8,12 +8,13 @@ type Props = {
   style?: ViewStyle;
   direction: 'horizontal' | 'vertical';
   alignInGrid?: boolean;
+  index?: number;
 };
 
 export const SpatialNavigationView = forwardRef<SpatialNavigationNodeRef, Props>(
-  ({ direction = 'horizontal', alignInGrid = false, children, style }: Props, ref) => {
+  ({ direction = 'horizontal', alignInGrid = false, children, style, index }: Props, ref) => {
     return (
-      <SpatialNavigationNode orientation={direction} alignInGrid={alignInGrid} ref={ref}>
+      <SpatialNavigationNode index={index} orientation={direction} alignInGrid={alignInGrid} ref={ref}>
         <View
           style={[style, direction === 'horizontal' ? styles.viewHorizontal : styles.viewVertical]}
         >
